@@ -1,0 +1,36 @@
+/* src/App.css */
+
+body {
+    background-color : #001f3f !important; /* Dark blue background */
+    color: white !important; /* Adjust text color for better readability */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
+.container {
+    padding: 20px !important;
+}
+.s{
+    width: 20%;
+}
+h1 {
+    text-align: center !important;
+}
+
+.list-group-item {
+    background-color: #003366 !important; /* Slightly lighter blue for course items */
+    border: none !important; /* Remove border for a cleaner look */
+    color: white !important;
+}
+
+.list-group-item:hover {
+    background-color: #004080 !important; /* Change color on hover for interaction feedback */
+}
+
+.btn {
+    background-color: #007bff !important; /* Bootstrap primary button color */
+    border: none !important; /* Remove border */
+}
+
+.btn:hover {
+    background-color: #004eb3 !important; /* Darker shade for hover effect */
+}
