@@ -3,5 +3,5 @@ from .models import Courses,Category
 
 # Register your models here.
 
-admin.register(Courses)
-admin.register(Category)
+admin.site.register(Courses)
+admin.site.register(Category)

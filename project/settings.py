@@ -28,6 +28,20 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+
+
+#rest_API
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,19 +51,40 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'course'
+    'course',
+    'corsheaders'
+    
+    #api
+    'rest_framework',
+    'rest_framework_swagger',
+    'drf_yasg'
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware' 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+ ]
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:3000',
+    'http://localhost:4200',
+ ]
+""" 
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React default port
+] """
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:3000',
+    'http://localhost:4200',
+    'yoursite.com'
+]
 ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
